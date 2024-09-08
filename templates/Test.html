@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7fafc;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #fff;
+            border-bottom: 1px solid #ccc;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #f59e0b;
+            font-weight: bold;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        h6 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select,
+        input[type="radio"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="radio"] {
+            width: auto;
+            margin-right: 10px;
+        }
+
+        select {
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group p {
+            font-size: 0.875rem;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #d97706;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #f59e0b;
+        }
+
+        hr {
+            margin: 30px 0;
+            border: 0;
+            border-top: 1px solid #ccc;
+        }
+
+        blockquote {
+            border-left: 4px solid #d97706;
+            padding-left: 15px;
+            font-style: italic;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="container">
+            <a href="/">Go back home</a>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <!-- Section 1 -->
+        <h2>Section 1</h2>
+
+        <form method="POST" action="{{url_for('form')}}">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input id="name" type="text" name="A" placeholder="Your name">
+                <p>You don't have to enter your name. It's optional.</p>
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <label><input type="radio" name="radio1" value="1" required> Male</label>
+                <label><input type="radio" name="radio1" value="0" required> Female</label>
+                <p>Please choose your registered gender</p>
+            </div>
+
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input id="age" type="number" name="B" placeholder="Your age" required>
+                <p>How old are you?</p>
+            </div>
+
+            <div class="form-group">
+                <label for="race">Race</label>
+                <select name="C" id="race" required>
+                    <option value="">Please select an option</option>
+                    <option value="0">African</option>
+                    <option value="1">Asian</option>
+                    <option value="2">European</option>
+                    <option value="3">Hispanic</option>
+                    <option value="4">Indian</option>
+                    <option value="5">Middle-Eastern</option>
+                    <option value="6">Mixed</option>
+                    <option value="7">Pakistani</option>
+                    <option value="8">Turkish</option>
+                    <option value="9">White</option>
+                    <option value="10">White Non-Hispanic</option>
+                </select>
+                <p>Please choose a category</p>
+            </div>
+
+            <hr>
+
+            <!-- Section 2 -->
+            <h2>Section 2</h2>
+            <h6>Please answer this section as honestly as you can</h6>
+
+            <div class="form-group">
+                <label for="bodyweight">Bodyweight</label>
+                <select name="D" id="bodyweight" required>
+                    <option value="">Please select an option</option>
+                    <option value="0">Normal weight</option>
+                    <option value="1">Obese</option>
+                    <option value="2">Overweight</option>
+                    <option value="3">Underweight</option>
+
+                </select>
+                <p>Classify your bodyweight</p>
+            </div>
+
+            <div class="form-group">
+                <label for="sexuality">Sexuality</label>
+                <select name="E" id="sexuality" required>
+                    <option value="">Please select an option</option>
+                    <option value="0">Bisexual</option>
+                    <option value="1">Gay/Lesbian</option>
+                    <option value="2">Straight</option>
+                    <option value="3">Other</option>
+                </select>
+                <p>What's your sexual orientation?</p>
+            </div>
+
+            <div class="form-group">
+                <label for="virgin">Virgin</label>
+                <label><input type="radio" name="radio2" value="1" required> Yes</label>
+                <label><input type="radio" name="radio2" value="0" required> No</label>
+                <p>Are you a virgin?</p>
+            </div>
+
+            <div class="form-group">
+                <label for="social-fear">Social fear</label>
+                <label><input type="radio" name="radio3" value="1" required> Yes</label>
+                <label><input type="radio" name="radio3" value="0" required> No</label>
+                <p>Do you have social fears?</p>
+            </div>
+
+            <div class="form-group">
+                <label for="depressed">Depressed</label>
+                <label><input type="radio" name="radio4" value="1" required> Yes</label>
+                <label><input type="radio" name="radio4" value="0" required> No</label>
+                <p>Do you often get depressed?</p>
+            </div>
+
+            <div class="form-group">
+                <label for="friends">Friends</label>
+                <input id="friends" type="number" name="F" placeholder="Number of close friends" required>
+                <p>Give an estimate of the number of close friends you have</p>
+            </div>
+
+            <hr>
+
+            <!-- Section 3 -->
+            <h2>Section 3</h2>
+
+            <div class="form-group">
+                <label for="education">Educational Level</label>
+                <select name="G" id="education" required>
+                    <option value="">Please select an option</option>
+                    <option value="9">No degree</option>
+                    <option value="5">High school degree</option>
+                    <option value="2">College degree</option>
+                    <option value="3">Diploma</option>
+                    <option value="0">Associate degree</option>
+                    <option value="1">Bachelor's degree</option>
+                    <option value="7">Professional degree</option>
+                    <option value="6">Masters degree</option>
+                    <option value="4">Doctorate degree</option>
+                    <option value="8">Trade</option>
+                </select>
+                <p>Choose your highest educational level</p>
+            </div>
+
+            <div class="form-group">
+                <label for="job">Job</label>
+                <select name="H" id="job" required>
+                    <option value="">Please select an option</option>
+                    <option value="0">Entrepreneur</option>
+                    <option value="1">Freelancer</option>
+                    <option value="2">Intern</option>
+                    <option value="3">Non-office job</option>
+                    <option value="4">Office job</option>
+                    <option value="5">Others</option>
+                    <option value="6">Unemployed</option>
+                </select>
+                <p>Please choose a category</p>
+            </div>
+
+            <div class="form-group">
+                <label for="income">Income</label>
+                <input id="income" type="number" name="I" placeholder="Your income" required>
+                <p>How much do you earn?</p>
+            </div>
+
+            <hr>
+
+            <blockquote>Thank you for answering each section correctly</blockquote>
+
+            <button type="submit">Predict</button>
+
+        </form>
+    </div>
+
+</body>
+
+</html>

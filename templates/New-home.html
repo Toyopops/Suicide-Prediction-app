@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Suicide Prevention</title>
+    <style>
+        /* Custom CSS based on Tailwind colors */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7fafc; /* Tailwind Gray-100 */
+            color: #2d3748; /* Tailwind Gray-800 */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #ffffff; /* Tailwind White */
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 900px;
+            width: 90%;
+            margin: 20px;
+            transform: scale(0.98);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .container:hover {
+            transform: scale(1);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            color: #f6ad55; /* Tailwind Orange-400 */
+            margin-bottom: 24px;
+            font-weight: 600;
+            animation: fadeIn 1s ease-out;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #4a5568; /* Tailwind Gray-700 */
+            margin: 20px 0;
+            font-weight: 500;
+            animation: fadeIn 1s 0.5s ease-out;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #2d3748; /* Tailwind Gray-800 */
+            margin-bottom: 20px;
+            line-height: 1.6;
+            animation: fadeIn 1s 1s ease-out;
+        }
+
+        a {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #f6ad55; /* Tailwind Orange-400 */
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: background-color 0.3s, transform 0.3s;
+            margin-top: 20px;
+            text-transform: uppercase;
+            animation: fadeIn 1s 1.5s ease-out;
+        }
+
+        a:hover {
+            background-color: #ed8936; /* Tailwind Orange-500 */
+            transform: scale(1.05);
+        }
+
+        .statistics,
+        .helpline,
+        .resources {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0; /* Tailwind Gray-200 */
+        }
+
+        .helpline p,
+        .resources a {
+            font-size: 1.2rem;
+            color: #f6ad55; /* Tailwind Orange-400 */
+            font-weight: 600;
+        }
+
+        .statistics p,
+        .helpline p {
+            margin: 10px 0;
+        }
+
+        .resources a {
+            color: #3182ce; /* Tailwind Blue-600 */
+            text-decoration: underline;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Suicide is never an option!</h1>
+        <p>Your mental health is crucial. If you or someone you know is struggling, we are here to provide support. Start by filling out our form to get a better understanding of your mental health.</p>
+
+        <a href="/form">Fill the Form and Predict</a>
+
+        <div class="statistics">
+            <h2>Important Statistics</h2>
+            <p>Every 40 seconds, someone dies by suicide. It is a significant public health issue that affects millions globally.</p>
+            <p>In the United States, approximately 45,000 people die by suicide each year.</p>
+            <p>Seeking help is crucial if you feel overwhelmed. Resources and support systems are available to assist you.</p>
+        </div>
+
+        <div class="helpline">
+            <h2>Helpline Numbers</h2>
+            <p>If you are in immediate danger, please call emergency services. In the US, contact the National Suicide Prevention Lifeline at 1-800-273-8255. Trained counselors are available 24/7.</p>
+            <p>In the UK, you can reach Samaritans at 116 123 for confidential support.</p>
+            <p>Reaching out to these resources can provide essential support and assistance.</p>
+        </div>
+
+        <div class="resources">
+            <h2>Additional Resources</h2>
+            <p>For more support, please visit:
+                <a href="https://www.healthline.com/health/suicide-and-suicidal-behavior#hotlines-and-resources" target="_blank">More Resources</a>
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
